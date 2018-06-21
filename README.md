@@ -1,4 +1,4 @@
-# iO S12 CarPlay Example
+# iOS 12 CarPlay Example
 
 An example of using the CarPlay framework in iOS 12 and later.
 
