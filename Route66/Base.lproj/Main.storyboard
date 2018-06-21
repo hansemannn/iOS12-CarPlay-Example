@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XxN-2O-3cc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Route 66-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Route66" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RoT-2G-6rX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-TI-kp7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="171"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lte-zS-Rcr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Origin …" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07C-Ge-ugW" customClass="LocationTextField" customModule="Route66" customModuleProvider="target">
+                                            <rect key="frame" x="21" y="22" width="333" height="38"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="97U-YL-kuQ"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" textContentType="location"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="vGt-DO-Q3g"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Destination …" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xkD-MV-a2W" customClass="LocationTextField" customModule="Route66" customModuleProvider="target">
+                                            <rect key="frame" x="21" y="68" width="333" height="38"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="Y7D-Be-JyR"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="location"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="19t-ya-3Bk"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-Ik-7oM">
+                                            <rect key="frame" x="21" y="120" width="333" height="38"/>
+                                            <color key="backgroundColor" red="0.21960784310000001" green="0.62745098040000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="OeU-vG-VFw"/>
+                                            </constraints>
+                                            <color key="tintColor" red="0.95686274510000002" green="0.94509803920000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="Start Route"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="19"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="startRouteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DUv-Sw-ByF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="oq9-Ik-7oM" secondAttribute="bottom" constant="13" id="5dY-sG-FUx"/>
+                                        <constraint firstItem="oq9-Ik-7oM" firstAttribute="firstBaseline" secondItem="xkD-MV-a2W" secondAttribute="baseline" constant="53" id="AUI-wj-jD7"/>
+                                        <constraint firstItem="07C-Ge-ugW" firstAttribute="top" secondItem="lte-zS-Rcr" secondAttribute="top" constant="22" id="Hqm-yr-J0m"/>
+                                        <constraint firstAttribute="trailing" secondItem="07C-Ge-ugW" secondAttribute="trailing" constant="21" id="YRa-ex-aqa"/>
+                                        <constraint firstItem="xkD-MV-a2W" firstAttribute="leading" secondItem="lte-zS-Rcr" secondAttribute="leading" constant="21" id="bXo-FY-lco"/>
+                                        <constraint firstItem="oq9-Ik-7oM" firstAttribute="leading" secondItem="lte-zS-Rcr" secondAttribute="leading" constant="21" id="en6-ij-GSU"/>
+                                        <constraint firstAttribute="trailing" secondItem="xkD-MV-a2W" secondAttribute="trailing" constant="21" id="geF-M9-bFK"/>
+                                        <constraint firstItem="07C-Ge-ugW" firstAttribute="leading" secondItem="lte-zS-Rcr" secondAttribute="leading" constant="21" id="xvt-tZ-LA3"/>
+                                        <constraint firstItem="xkD-MV-a2W" firstAttribute="top" secondItem="07C-Ge-ugW" secondAttribute="bottom" constant="8" id="ynG-OW-FNq"/>
+                                        <constraint firstAttribute="trailing" secondItem="oq9-Ik-7oM" secondAttribute="trailing" constant="21" id="zK0-7I-7ae"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="6v7-my-A1Y"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FgH-TI-kp7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1M8-u9-sbB"/>
+                            <constraint firstItem="FgH-TI-kp7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="KzB-tZ-Tu5"/>
+                            <constraint firstItem="FgH-TI-kp7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZD6-nJ-lce"/>
+                            <constraint firstItem="FgH-TI-kp7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="b5K-NW-KsM"/>
+                            <constraint firstItem="FgH-TI-kp7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mzf-pb-6Hq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Route 66" id="07w-XG-Tlo"/>
+                    <connections>
+                        <outlet property="destinationTextField" destination="xkD-MV-a2W" id="XJT-Oj-m7O"/>
+                        <outlet property="originTextField" destination="07C-Ge-ugW" id="1UW-jW-KEf"/>
+                        <outlet property="startRouteButton" destination="oq9-Ik-7oM" id="ksY-CK-n8Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ut8-dr-C80">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XxN-2O-3cc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PZM-yl-jRy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="09h-E8-7MO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dP-uZ-E9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
