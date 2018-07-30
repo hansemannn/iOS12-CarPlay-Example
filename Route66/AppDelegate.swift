@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CPApplicationDelegate {
       return // No active route
     }
 
-    let mapTemplate = RootMapTemplate()
+    let mapTemplate = CPMapTemplate()
     mapTemplate.tripEstimateStyle = .dark
     mapTemplate.guidanceBackgroundColor = UIColor.green
 

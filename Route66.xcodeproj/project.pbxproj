@@ -12,7 +12,6 @@
 		DB65F1DD20DB962300C67DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F1DB20DB962300C67DE2 /* Main.storyboard */; };
 		DB65F1DF20DB962500C67DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F1DE20DB962500C67DE2 /* Assets.xcassets */; };
 		DB65F1E220DB962500C67DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F1E020DB962500C67DE2 /* LaunchScreen.storyboard */; };
-		DB65F1EA20DB96B400C67DE2 /* RootMapTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F1E920DB96B400C67DE2 /* RootMapTemplate.swift */; };
 		DB65F1EC20DB994300C67DE2 /* LocationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F1EB20DB994300C67DE2 /* LocationTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +23,6 @@
 		DB65F1DE20DB962500C67DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB65F1E120DB962500C67DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB65F1E320DB962500C67DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB65F1E920DB96B400C67DE2 /* RootMapTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMapTemplate.swift; sourceTree = "<group>"; };
 		DB65F1EB20DB994300C67DE2 /* LocationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextField.swift; sourceTree = "<group>"; };
 		DBF95AE120DBE3A5008182C6 /* Route66.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Route66.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +69,6 @@
 			children = (
 				DB65F1D720DB962300C67DE2 /* AppDelegate.swift */,
 				DB65F1D920DB962300C67DE2 /* ViewController.swift */,
-				DB65F1E920DB96B400C67DE2 /* RootMapTemplate.swift */,
 				DB65F1EB20DB994300C67DE2 /* LocationTextField.swift */,
 			);
 			name = Sources;
@@ -166,7 +163,6 @@
 			files = (
 				DB65F1EC20DB994300C67DE2 /* LocationTextField.swift in Sources */,
 				DB65F1DA20DB962300C67DE2 /* ViewController.swift in Sources */,
-				DB65F1EA20DB96B400C67DE2 /* RootMapTemplate.swift in Sources */,
 				DB65F1D820DB962300C67DE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
