@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import MapKit
 import UIKit
 
 enum TextFieldType: IntegerLiteralType {
@@ -76,11 +77,43 @@ class ViewController: UIViewController {
         guard let placemarks = placemarks, let location = placemarks.first?.location else { return }
         destination = location.coordinate
         
-        UserDefaults.standard.set(["latitude": origin.latitude, "longitude": origin.latitude], forKey: "_origin")
-        UserDefaults.standard.set(["latitude": destination.latitude, "longitude": destination.latitude], forKey: "_destination")
-        
-        strongSelf._showAlert(with: NSLocalizedString("Location saved successfully! Go and connect to CarPlay to preview the route", comment: ""))
+        strongSelf._getDirections(from: origin, destination: destination)
       }
+    }
+  }
+  
+  private func _getDirections(from origin: CLLocationCoordinate2D, destination: CLLocationCoordinate2D) -> Void {
+    let request = MKDirections.Request()
+    request.source = MKMapItem(placemark: MKPlacemark(coordinate: origin))
+    request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
+    request.transportType = .automobile
+    
+    let directions = MKDirections(request: request)
+    directions.calculate { [weak self ] response, error in
+      guard let strongSelf = self else { return }
+
+      guard error == nil else {
+        print("Error calculating the directions: \(String(describing: error?.localizedDescription))")
+        return
+      }
+
+      guard let routes = response?.routes else { return }
+      var encodedDirections: [[String: Any]] = [[:]]
+  
+      for route in routes {
+        let direction = [
+          "name": route.name,
+          "steps": route.steps.map({ return ["instructions": $0.instructions, "distance": $0.distance] }),
+          "advisoryNotices": route.advisoryNotices
+        ] as [String: Any]
+        encodedDirections.append(direction)
+      }
+      
+      UserDefaults.standard.set(["latitude": origin.latitude, "longitude": origin.latitude], forKey: "_origin")
+      UserDefaults.standard.set(["latitude": destination.latitude, "longitude": destination.latitude], forKey: "_destination")
+      UserDefaults.standard.set(encodedDirections, forKey: "_directions")
+      
+      strongSelf._showAlert(with: NSLocalizedString("Location saved successfully! Go and connect to CarPlay to preview the route", comment: ""))
     }
   }
   

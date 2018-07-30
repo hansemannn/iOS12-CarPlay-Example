@@ -46,6 +46,8 @@
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Can we access your location?</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string></string>
+	<string>Can we access your Bluetooth?</string>
+	<key>NSVideoSubscriberAccountUsageDescription</key>
+	<string>Can we access your external display?</string>
 </dict>
 </plist>

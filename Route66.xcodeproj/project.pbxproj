@@ -26,6 +26,7 @@
 		DB65F1E320DB962500C67DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB65F1E920DB96B400C67DE2 /* RootMapTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootMapTemplate.swift; sourceTree = "<group>"; };
 		DB65F1EB20DB994300C67DE2 /* LocationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTextField.swift; sourceTree = "<group>"; };
+		DBF95AE120DBE3A5008182C6 /* Route66.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Route66.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		DB65F1D620DB962300C67DE2 /* Route66 */ = {
 			isa = PBXGroup;
 			children = (
+				DBF95AE120DBE3A5008182C6 /* Route66.entitlements */,
 				DBF95ADF20DB9C54008182C6 /* Sources */,
 				DBF95AE020DB9C60008182C6 /* Resources */,
 			);
@@ -118,6 +120,11 @@
 				TargetAttributes = {
 					DB65F1D320DB962300C67DE2 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -304,7 +311,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Route66/Route66.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6K4KHD4NQF;
 				INFOPLIST_FILE = Route66/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,7 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Route66/Route66.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6K4KHD4NQF;
 				INFOPLIST_FILE = Route66/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

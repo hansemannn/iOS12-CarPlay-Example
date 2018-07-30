@@ -10,9 +10,9 @@ import UIKit
 import CarPlay
 
 class RootMapTemplate: CPMapTemplate, CPMapTemplateDelegate {
-
-  override init(configuration: CPMapTemplateConfiguration?) {
-    super.init(configuration: configuration)
+  
+  override init() {
+    super.init()
     self.mapDelegate = self
   }
   

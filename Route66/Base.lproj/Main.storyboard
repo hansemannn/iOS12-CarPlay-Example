@@ -63,7 +63,7 @@
                                                 <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="19t-ya-3Bk"/>
                                             </connections>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-Ik-7oM">
+                                        <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-Ik-7oM">
                                             <rect key="frame" x="21" y="120" width="333" height="38"/>
                                             <color key="backgroundColor" red="0.21960784310000001" green="0.62745098040000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
